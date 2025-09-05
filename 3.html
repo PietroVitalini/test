@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VITALINI — Light Mock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Optional: crisp rendering for wordmark PNG */
+      .pixel-antialiased { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-neutral-900">
+
+    <!-- Header: white with black content -->
+    <header class="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+      <div class="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3">
+        <a href="#top" class="flex items-center gap-3">
+          <!-- VP icon: force to black -->
+          <img src="https://framerusercontent.com/images/BzgJ6MatTxf6xpHjJV60zm5QNE.png?width=246&height=237" alt="Vitalini VP" class="h-8 w-8 rounded-lg object-contain [filter:brightness(0)]" />
+          <span class="sr-only">Vitalini</span>
+        </a>
+        <nav class="ml-auto hidden items-center gap-6 md:flex">
+          <a href="#custom" class="text-sm font-medium text-neutral-700 hover:text-black">Custom</a>
+          <a href="#brand" class="text-sm font-medium text-neutral-700 hover:text-black">Brand</a>
+          <a href="#references" class="text-sm font-medium text-neutral-700 hover:text-black">References</a>
+          <a href="#agents" class="text-sm font-medium text-neutral-700 hover:text-black">Agents</a>
+          <a href="#shop" class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition hover:scale-[1.03] active:scale-95">Shop</a>
+        </nav>
+        <!-- Mobile icon -->
+        <button class="ml-auto inline-flex items-center justify-center rounded-xl border border-neutral-200 p-2 md:hidden" aria-label="Open menu">
+          <div class="h-0.5 w-5 bg-neutral-900"></div>
+          <div class="mt-1 h-0.5 w-5 bg-neutral-900"></div>
+          <div class="mt-1 h-0.5 w-5 bg-neutral-900"></div>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="mx-auto mt-4 max-w-7xl px-4">
+      <div class="relative overflow-hidden rounded-3xl border border-neutral-200">
+        <img src="https://framerusercontent.com/images/wQLtEcvxdljvJ9cpeRVAGtpcJfU.png?scale-down-to=1024&width=1245&height=649" alt="Hero" class="h-[58vh] w-full object-cover md:h-[70vh]" />
+        <!-- Keep the wordmark WHITE (original). Add subtle shadow for readability. -->
+        <div class="pointer-events-none absolute inset-0 flex items-start justify-center pt-[10vh] p-6">
+          <img src="https://framerusercontent.com/images/nx9LbZhRiboB2lOfituUVRGssI.png?width=751&height=130" alt="VITALINI" class="pixel-antialiased w-[90%] max-w-5xl drop-shadow-[0_6px_24px_rgba(0,0,0,0.55)] md:w-[78%]" />
+        </div>
+        <!-- Bottom CTA bar -->
+        <div class="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-between gap-3 p-4 md:p-6">
+          <div class="hidden items-center gap-3 md:flex">
+            <img src="https://framerusercontent.com/images/BzgJ6MatTxf6xpHjJV60zm5QNE.png?width=246&height=237" alt="VP" class="h-8 w-8 opacity-90 [filter:brightness(0)]" />
+            <p class="text-sm text-neutral-600">Born to be fast · Born to win</p>
+          </div>
+          <div class="ml-auto flex items-center gap-2">
+            <a href="#custom" class="rounded-full border border-neutral-900/15 bg-neutral-900/5 px-4 py-2 text-sm font-semibold text-neutral-900 backdrop-blur transition hover:bg-neutral-900/10">Customize</a>
+            <a href="#shop" class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition hover:scale-[1.02]">Shop the Collection</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Strip (Repetition) -->
+    <section class="mx-auto -mt-12 md:-mt-16 max-w-7xl px-4 pb-20 pt-0 relative z-10">
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <!-- SKI CLUB repetition card -->
+        <a href="#ski-club" class="relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/3cFOm6HG9gMGpVtNOY6CQvgV2E.webp?width=1456&height=816" alt="Ski Club" class="h-44 w-full object-cover md:h-48" />
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase flex items-center justify-center gap-6">
+              <span class="text-black/60">SKI CLUB</span>
+              <span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.55)]">SKI CLUB</span>
+              <span class="text-black/60">SKI CLUB</span>
+            </div>
+          </div>
+        </a>
+        <!-- SKI SCHOOL repetition card -->
+        <a href="#ski-school" class="relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/VwJQVZjz60tiAza6YOiyvrnhC8U.jpg?width=2000&height=1334" alt="Ski School" class="h-44 w-full object-cover md:h-48" />
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase flex items-center justify-center gap-6">
+              <span class="text-black/60">SKI SCHOOL</span>
+              <span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.55)]">SKI SCHOOL</span>
+              <span class="text-black/60">SKI SCHOOL</span>
+            </div>
+          </div>
+        </a>
+        <!-- WORKER repetition card -->
+        <a href="#worker" class="relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/pPubcEs0E73BrzMJ9ISNYbNbmE.jpg?width=2048&height=1365" alt="Worker" class="h-44 w-full object-cover md:h-48" />
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase flex items-center justify-center gap-6">
+              <span class="text-black/60">WORKER</span>
+              <span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.55)]">WORKER</span>
+              <span class="text-black/60">WORKER</span>
+            </div>
+          </div>
+        </a>
+        <!-- COLLECTION repetition card -->
+        <a href="#collection" class="relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/eYZXiqyGXqXakB6Id6z3RPpHVc.png?width=1536&height=1024" alt="Collection" class="h-44 w-full object-cover md:h-48" />
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/60 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase flex items-center justify-center gap-6">
+              <span class="text-black/60">COLLECTION</span>
+              <span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,0.55)]">COLLECTION</span>
+              <span class="text-black/60">COLLECTION</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
+      © <span id="year"></span> VITALINI — Performance Wear. All rights reserved.
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
