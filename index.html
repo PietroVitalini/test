@@ -1,181 +1,192 @@
-export default function VitaliniMock() {
-  const nav = [
-    { label: "Custom", href: "#custom" },
-    { label: "Brand", href: "#brand" },
-    { label: "References", href: "#references" },
-    { label: "Agents", href: "#agents" },
-  ];
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vitalini Mock</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white">
+    <div id="root"></div>
 
-  const tiles = [
-    {
-      label: "SKI CLUB",
-      href: "#ski-club",
-      img: "https://framerusercontent.com/images/3cFOm6HG9gMGpVtNOY6CQvgV2E.webp?width=1456&height=816",
-    },
-    {
-      label: "SKI SCHOOL",
-      href: "#ski-school",
-      img: "https://framerusercontent.com/images/VwJQVZjz60tiAza6YOiyvrnhC8U.jpg?width=2000&height=1334",
-    },
-    {
-      label: "WORKER",
-      href: "#worker",
-      img: "https://framerusercontent.com/images/pPubcEs0E73BrzMJ9ISNYbNbmE.jpg?width=2048&height=1365",
-    },
-    {
-      label: "COLLECTION",
-      href: "#collection",
-      img: "https://framerusercontent.com/images/eYZXiqyGXqXakB6Id6z3RPpHVc.png?width=1536&height=1024",
-    },
-  ];
+    <script type="text/babel">
+      function VitaliniMock() {
+        const nav = [
+          { label: "Custom", href: "#custom" },
+          { label: "Brand", href: "#brand" },
+          { label: "References", href: "#references" },
+          { label: "Agents", href: "#agents" },
+        ];
 
-  return (
-    <div className="min-h-screen bg-white text-neutral-900">
-      {/* Local CSS for crisp outlined text without adding color */}
-      <style>{`
-        .text-outline {
-          /* thin white edge that works on mixed backgrounds without color cast */
-          text-shadow:
-            0 1px 0 rgba(255,255,255,0.9),
-            0 -1px 0 rgba(255,255,255,0.9),
-            1px 0 0 rgba(255,255,255,0.9),
-            -1px 0 0 rgba(255,255,255,0.9),
-            0 0 18px rgba(0,0,0,0.35);
-        }
-        .text-stroke {
-          -webkit-text-stroke: 6px rgba(0,0,0,0.75);
-          color: transparent;
-        }
-      `}</style>
+        const tiles = [
+          {
+            label: "SKI CLUB",
+            href: "#ski-club",
+            img: "https://framerusercontent.com/images/3cFOm6HG9gMGpVtNOY6CQvgV2E.webp?width=1456&height=816",
+          },
+          {
+            label: "SKI SCHOOL",
+            href: "#ski-school",
+            img: "https://framerusercontent.com/images/VwJQVZjz60tiAza6YOiyvrnhC8U.jpg?width=2000&height=1334",
+          },
+          {
+            label: "WORKER",
+            href: "#worker",
+            img: "https://framerusercontent.com/images/pPubcEs0E73BrzMJ9ISNYbNbmE.jpg?width=2048&height=1365",
+          },
+          {
+            label: "COLLECTION",
+            href: "#collection",
+            img: "https://framerusercontent.com/images/eYZXiqyGXqXakB6Id6z3RPpHVc.png?width=1536&height=1024",
+          },
+        ];
 
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70">
-        <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3">
-          <a href="#top" className="flex items-center gap-3">
-            <img
-              src="https://framerusercontent.com/images/BzgJ6MatTxf6xpHjJV60zm5QNE.png?width=246&height=237"
-              alt="Vitalini VP logo"
-              className="h-8 w-8 rounded-lg object-contain brightness-0"
-            />
-            <span className="sr-only">Vitalini</span>
-          </a>
+        return (
+          <div className="min-h-screen bg-white text-neutral-900">
+            <style>{`
+              .text-outline {
+                text-shadow:
+                  0 1px 0 rgba(255,255,255,0.9),
+                  0 -1px 0 rgba(255,255,255,0.9),
+                  1px 0 0 rgba(255,255,255,0.9),
+                  -1px 0 0 rgba(255,255,255,0.9),
+                  0 0 18px rgba(0,0,0,0.35);
+              }
+              .text-stroke {
+                -webkit-text-stroke: 6px rgba(0,0,0,0.75);
+                color: transparent;
+              }
+            `}</style>
 
-          <nav className="ml-auto hidden items-center gap-6 md:flex">
-            {nav.map((n) => (
-              <a
-                key={n.label}
-                href={n.href}
-                className="text-sm font-medium text-neutral-700 hover:text-black"
-              >
-                {n.label}
-              </a>
-            ))}
-            <a
-              href="#shop"
-              className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition hover:scale-[1.03] active:scale-95"
-            >
-              Shop
-            </a>
-          </nav>
+            {/* Header */}
+            <header className="sticky top-0 z-50 border-b border-neutral-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/70">
+              <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3">
+                <a href="#top" className="flex items-center gap-3">
+                  <img
+                    src="https://framerusercontent.com/images/BzgJ6MatTxf6xpHjJV60zm5QNE.png?width=246&height=237"
+                    alt="Vitalini VP logo"
+                    className="h-8 w-8 rounded-lg object-contain brightness-0"
+                  />
+                  <span className="sr-only">Vitalini</span>
+                </a>
 
-          {/* Mobile menu icon (visual only in this mock) */}
-          <button
-            className="ml-auto inline-flex items-center justify-center rounded-xl border border-neutral-200 p-2 md:hidden"
-            aria-label="Open menu"
-          >
-            <div className="h-0.5 w-5 bg-neutral-200" />
-            <div className="mt-1 h-0.5 w-5 bg-neutral-200" />
-            <div className="mt-1 h-0.5 w-5 bg-neutral-200" />
-          </button>
-        </div>
-      </header>
+                <nav className="ml-auto hidden items-center gap-6 md:flex">
+                  {nav.map((n) => (
+                    <a
+                      key={n.label}
+                      href={n.href}
+                      className="text-sm font-medium text-neutral-700 hover:text-black"
+                    >
+                      {n.label}
+                    </a>
+                  ))}
+                  <a
+                    href="#shop"
+                    className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black transition hover:scale-[1.03] active:scale-95"
+                  >
+                    Shop
+                  </a>
+                </nav>
 
-      {/* Hero */}
-      <section className="mx-auto mt-4 max-w-7xl px-4">
-        <div className="relative overflow-hidden rounded-3xl border border-neutral-200">
-          <img
-            src="https://framerusercontent.com/images/wQLtEcvxdljvJ9cpeRVAGtpcJfU.png?scale-down-to=1024&width=1245&height=649"
-            alt="Hero – Giant slalom in snowfall"
-            className="h-[58vh] w-full object-cover md:h-[70vh]"
-          />
-
-          {/* Readability gradient and subtle grain */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/20 to-white/70" />
-
-          {/* Centered wordmark */}
-          <div className="pointer-events-none absolute inset-0 grid place-items-center p-6">
-            <img
-              src="https://framerusercontent.com/images/xv8VvEtsb1xb0A11NM4s9FA5NU.png?scale-down-to=512&width=1019&height=213"
-              alt="VITALINI wordmark"
-              className="w-[90%] max-w-5xl brightness-0 md:w-[78%]"
-            />
-          </div>
-
-          {/* Bottom CTA bar */}
-          <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-between gap-3 p-4 md:p-6">
-            <div className="hidden items-center gap-3 md:flex">
-              <img
-                src="https://framerusercontent.com/images/BzgJ6MatTxf6xpHjJV60zm5QNE.png?width=246&height=237"
-                alt="VP mark"
-                className="h-8 w-8 opacity-90 brightness-0"
-              />
-              <p className="text-sm text-neutral-600">Born to be fast · Born to win</p>
-            </div>
-            <div className="ml-auto flex items-center gap-2">
-              <a
-                href="#custom"
-                className="rounded-full border border-neutral-900/15 bg-neutral-900/5 px-4 py-2 text-sm font-semibold text-neutral-900 backdrop-blur transition hover:bg-neutral-900/10"
-              >
-                Customize
-              </a>
-              <a
-                href="#shop"
-                className="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition hover:scale-[1.02]"
-              >
-                Shop the Collection
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Category strip */}
-      <section className="mx-auto max-w-7xl px-4 pb-20 pt-6">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {tiles.map((t) => (
-            <a
-              key={t.label}
-              href={t.href}
-              className="group relative overflow-hidden rounded-2xl border border-neutral-200"
-            >
-              <img
-                src={t.img}
-                alt={t.label}
-                className="h-44 w-full object-cover transition duration-500 group-hover:scale-[1.04] md:h-48"
-              />
-              {/* dark floor for uniform contrast */}
-              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70" />
-              {/* huge label across */}
-              <div className="absolute inset-0 flex items-end p-3">
-                <span
-                  className="text-white select-none text-[10vw] leading-none tracking-tight opacity-90 md:text-[3.1rem]"
+                <button
+                  className="ml-auto inline-flex items-center justify-center rounded-xl border border-neutral-200 p-2 md:hidden"
+                  aria-label="Open menu"
                 >
-                  {t.label}
-                </span>
+                  <div className="h-0.5 w-5 bg-neutral-200" />
+                  <div className="mt-1 h-0.5 w-5 bg-neutral-200" />
+                  <div className="mt-1 h-0.5 w-5 bg-neutral-200" />
+                </button>
               </div>
-              {/* hover focus ring */}
-              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 ring-white/0 transition group-hover:ring-4 group-hover:ring-black/10" />
-            </a>
-          ))}
-        </div>
-      </section>
+            </header>
 
-      {/* Minimal footer */}
-      <footer className="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
-        <p>
-          © {new Date().getFullYear()} VITALINI — Performance Wear. All rights reserved.
-        </p>
-      </footer>
-    </div>
-  );
-}
+            {/* Hero */}
+            <section className="mx-auto mt-4 max-w-7xl px-4">
+              <div className="relative overflow-hidden rounded-3xl border border-neutral-200">
+                <img
+                  src="https://framerusercontent.com/images/wQLtEcvxdljvJ9cpeRVAGtpcJfU.png?scale-down-to=1024&width=1245&height=649"
+                  alt="Hero – Giant slalom in snowfall"
+                  className="h-[58vh] w-full object-cover md:h-[70vh]"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/20 to-white/70" />
+
+                <div className="pointer-events-none absolute inset-0 grid place-items-center p-6">
+                  <img
+                    src="https://framerusercontent.com/images/xv8VvEtsb1xb0A11NM4s9FA5NU.png?scale-down-to=512&width=1019&height=213"
+                    alt="VITALINI wordmark"
+                    className="w-[90%] max-w-5xl brightness-0 md:w-[78%]"
+                  />
+                </div>
+
+                <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-between gap-3 p-4 md:p-6">
+                  <div className="hidden items-center gap-3 md:flex">
+                    <img
+                      src="https://framerusercontent.com/images/BzgJ6MatTxf6xpHjJV60zm5QNE.png?width=246&height=237"
+                      alt="VP mark"
+                      className="h-8 w-8 opacity-90 brightness-0"
+                    />
+                    <p className="text-sm text-neutral-600">
+                      Born to be fast · Born to win
+                    </p>
+                  </div>
+                  <div className="ml-auto flex items-center gap-2">
+                    <a
+                      href="#custom"
+                      className="rounded-full border border-neutral-900/15 bg-neutral-900/5 px-4 py-2 text-sm font-semibold text-neutral-900 backdrop-blur transition hover:bg-neutral-900/10"
+                    >
+                      Customize
+                    </a>
+                    <a
+                      href="#shop"
+                      className="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white transition hover:scale-[1.02]"
+                    >
+                      Shop the Collection
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Category strip */}
+            <section className="mx-auto max-w-7xl px-4 pb-20 pt-6">
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                {tiles.map((t) => (
+                  <a
+                    key={t.label}
+                    href={t.href}
+                    className="group relative overflow-hidden rounded-2xl border border-neutral-200"
+                  >
+                    <img
+                      src={t.img}
+                      alt={t.label}
+                      className="h-44 w-full object-cover transition duration-500 group-hover:scale-[1.04] md:h-48"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/70" />
+                    <div className="absolute inset-0 flex items-end p-3">
+                      <span className="text-white select-none text-[10vw] leading-none tracking-tight opacity-90 md:text-[3.1rem]">
+                        {t.label}
+                      </span>
+                    </div>
+                    <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 ring-white/0 transition group-hover:ring-4 group-hover:ring-black/10" />
+                  </a>
+                ))}
+              </div>
+            </section>
+
+            {/* Footer */}
+            <footer className="border-t border-neutral-200 py-10 text-center text-sm text-neutral-500">
+              <p>
+                © {new Date().getFullYear()} VITALINI — Performance Wear. All rights
+                reserved.
+              </p>
+            </footer>
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<VitaliniMock />);
+    </script>
+  </body>
+</html>
