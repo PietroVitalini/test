@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VITALINI — Maximalist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Kinetic accents */
+      .speed-lines{background:repeating-linear-gradient(100deg,rgba(0,0,0,.06) 0 2px,transparent 2px 18px);animation:slide 20s linear infinite;}
+      @keyframes slide{to{background-position:-2000px 0}}
+      .ticker{white-space:nowrap;animation:ticker 24s linear infinite}
+      @keyframes ticker{to{transform:translateX(-50%)}}
+      /* Big guilloche-ish grid */
+      .guilloche{background:
+        radial-gradient(1200px 800px at 50% -10%,rgba(0,0,0,.06),transparent 60%),
+        repeating-linear-gradient(0deg,rgba(0,0,0,.04) 0 1px,transparent 1px 20px),
+        repeating-linear-gradient(90deg,rgba(0,0,0,.04) 0 1px,transparent 1px 20px);
+      }
+      /* Fancy summary chevron */
+      details>summary::after{content:"";width:.65rem;height:.65rem;border-right:2px solid #111;border-bottom:2px solid #111;transform:rotate(-45deg);transition:transform .25s ease;margin-left:.5rem;display:inline-block}
+      details[open]>summary::after{transform:rotate(45deg)}
+      .pixel-antialiased{image-rendering:-webkit-optimize-contrast;image-rendering:crisp-edges}
+      /* Reveal-on-scroll (no JSX needed) */
+      .reveal-up{opacity:0; transform: translateY(16px); transition: opacity .8s cubic-bezier(.2,.6,.2,1), transform .8s cubic-bezier(.2,.6,.2,1)}
+      .reveal-fade{opacity:0; transform: scale(.98); transition: opacity .9s cubic-bezier(.2,.6,.2,1), transform .9s cubic-bezier(.2,.6,.2,1)}
+      .reveal-in{opacity:1; transform:none}
+    </style>
+  </head>
+  <body class="min-h-screen bg-white text-neutral-900">
+
+    <!-- Header (light, black icon) -->
+    <header class="sticky top-0 z-50 border-b border-neutral-200 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-[1800px] items-center gap-6 px-4 py-3">
+        <a href="#top" class="flex items-center gap-3">
+          <img src="https://framerusercontent.com/images/dI4yKCCkB9eEywDII6YSpKuEj0.png?width=222&height=195" class="h-10 w-10 rounded-lg object-contain [filter:brightness(0)]" alt="VP"/>
+          <span class="sr-only">Vitalini</span>
+        </a>
+        <nav class="ml-auto hidden items-center gap-6 md:flex">
+          <a class="inline-flex items-center py-2 text-sm font-medium text-neutral-700 hover:text-black" href="#custom">Custom</a>
+          <a class="inline-flex items-center py-2 text-sm font-medium text-neutral-700 hover:text-black" href="#brand">Brand</a>
+          <a class="inline-flex items-center py-2 text-sm font-medium text-neutral-700 hover:text-black" href="#references">References</a>
+          <a class="inline-flex items-center py-2 text-sm font-medium text-neutral-700 hover:text-black" href="#agents">Agents</a>
+          <a class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white" href="#shop">Shop</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero with wordmark (no noise, white text logo image) -->
+    <section id="shop" class="mx-auto mt-4 max-w-[1800px] px-4 scroll-mt-24">
+      <div class="relative overflow-hidden rounded-3xl border border-neutral-200 h-[92vh]">
+        <img src="https://framerusercontent.com/images/fcQ8ZgRH6Qi4END8Y0RaJvLSt9c.jpg?width=1440&height=1440" class="h-full w-full object-cover object-[50%_32%]" alt="Hero"/>
+        <div class="pointer-events-none absolute inset-0 flex items-end justify-center p-6 pb-8 md:pb-10">
+          <img src="https://framerusercontent.com/images/nx9LbZhRiboB2lOfituUVRGssI.png?width=751&height=130" class="pixel-antialiased w-[90%] max-w-5xl drop-shadow-[0_6px_24px_rgba(0,0,0,.55)] md:w-[78%]" alt="VITALINI"/>
+        </div>
+        <div class="hidden">
+          <div class="hidden items-center gap-3 md:flex"><img src="https://framerusercontent.com/images/BzgJ6MatTxf6xpHjJV60zm5QNE.png?width=246&height=237" class="h-8 w-8 [filter:brightness(0)]"/><p class="text-sm text-neutral-600">Born to be fast · Born to win</p></div>
+          <div class="ml-auto flex gap-2">
+            <a class="rounded-full border border-neutral-900/15 bg-neutral-900/5 px-4 py-2 text-sm font-semibold text-neutral-900 hover:bg-neutral-900/10" href="#custom">Customize</a>
+            <a class="rounded-full bg-black px-4 py-2 text-sm font-semibold text-white" href="#shop">Shop the Collection</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Repetition Cards overlapping hero -->
+    <section id="references" class="relative z-10 mx-auto -mt-2 max-w-[1800px] px-4 pt-0 md:-mt-3 scroll-mt-24">
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <!-- Card template x4 -->
+        <a href="https://vitalini.framer.website/ski-club-light" class="group relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/3cFOm6HG9gMGpVtNOY6CQvgV2E.webp?width=1456&height=816" class="w-full aspect-[16/10] object-cover block"/>
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">SKI CLUB SKI CLUB SKI CLUB SKI CLUB SKI CLUB</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase flex items-center justify-center gap-6"><span class="text-black/15">SKI CLUB</span><span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,.55)]">SKI CLUB</span><span class="text-black/15">SKI CLUB</span></div>
+          </div>
+        </a>
+        <a href="#" class="group relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/VwJQVZjz60tiAza6YOiyvrnhC8U.jpg?width=2000&height=1334" class="w-full aspect-[16/10] object-cover block"/>
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase">SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL SKI SCHOOL</div>
+            <div class="w-[160%] -ml-[30%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(8.3vw,2.1rem)] uppercase flex items-center justify-center gap-6"><span class="text-black/15">SKI SCHOOL</span><span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,.55)]">SKI SCHOOL</span><span class="text-black/15">SKI SCHOOL</span></div>
+          </div>
+        </a>
+        <a href="#" class="group relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/pPubcEs0E73BrzMJ9ISNYbNbmE.jpg?width=2048&height=1365" class="w-full aspect-[16/10] object-cover block"/>
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase">WORKER WORKER WORKER WORKER WORKER</div>
+            <div class="w-[150%] -ml-[25%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(9vw,2.2rem)] uppercase flex items-center justify-center gap-6"><span class="text-black/15">WORKER</span><span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,.55)]">WORKER</span><span class="text-black/15">WORKER</span></div>
+          </div>
+        </a>
+        <a href="#" class="group relative overflow-hidden rounded-2xl shadow-xl transition-transform hover:-translate-y-1.5">
+          <img src="https://framerusercontent.com/images/eYZXiqyGXqXakB6Id6z3RPpHVc.png?width=1536&height=1024" class="w-full aspect-[16/10] object-cover block"/>
+          <div class="absolute inset-0 flex flex-col justify-end gap-1 p-3">
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap text-black/15 font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase">COLLECTION COLLECTION COLLECTION COLLECTION COLLECTION</div>
+            <div class="w-[170%] -ml-[35%] overflow-hidden whitespace-nowrap font-black leading-none tracking-tight text-[min(7.2vw,1.95rem)] uppercase flex items-center justify-center gap-6"><span class="text-black/15">COLLECTION</span><span class="text-white drop-shadow-[0_3px_12px_rgba(0,0,0,.55)]">COLLECTION</span><span class="text-black/15">COLLECTION</span></div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Ribbon ticker + kinetic lines -->
+    <section id="brand" class="mx-auto max-w-[1800px] px-4 py-8 scroll-mt-24">
+      <div class="relative overflow-hidden rounded-3xl border border-neutral-200 bg-white">
+        <div class="absolute inset-0 speed-lines"></div>
+        <div class="relative flex overflow-hidden border-y border-neutral-200 bg-black text-white">
+          <div class="ticker py-3 text-lg font-black tracking-wide">
+            <span class="mx-6">QUALITY</span><span class="mx-6">INNOVATION</span><span class="mx-6">MATERIALS</span><span class="mx-6">BORN TO BE FAST</span><span class="mx-6">CUSTOM FOR CLUBS</span><span class="mx-6">DESIGNED IN ITALY</span>
+            <span class="mx-6">QUALITY</span><span class="mx-6">INNOVATION</span><span class="mx-6">MATERIALS</span><span class="mx-6">BORN TO BE FAST</span><span class="mx-6">CUSTOM FOR CLUBS</span><span class="mx-6">DESIGNED IN ITALY</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Integrated sections (plain HTML, no JSX) ===== -->
+    <!-- Thin red separator -->
+    <div class="mx-auto my-6 w-full max-w-[1800px] px-4"><div class="h-[2px]" style="background:#E10600"></div></div>
+
+    <!-- Collections -->
+    <section id="collections" class="relative mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+      <div class="flex items-end justify-between">
+        <h2 class="reveal-up text-4xl sm:text-6xl font-black tracking-tight">Collections</h2>
+        <a href="#shop" class="reveal-up text-xs font-extrabold uppercase tracking-[0.2em] text-black/60 hover:text-black">Shop all →</a>
+      </div>
+      <div class="mt-8 grid grid-cols-12 gap-6">
+        <div class="col-span-12 lg:col-span-7 h-[520px] reveal-fade relative overflow-hidden rounded-3xl border border-black/10 bg-white shadow-[0_20px_60px_rgba(0,0,0,.06)]">
+          <img src="https://framerusercontent.com/images/eYZXiqyGXqXakB6Id6z3RPpHVc.png?width=1536&height=1024" alt="Collection" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-x-0 bottom-0 p-6">
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-black backdrop-blur">
+              <span class="h-2 w-2 rounded-full" style="background:#E10600"></span>
+              Performance outerwear
+            </div>
+            <h3 class="mt-2 text-2xl sm:text-3xl font-black tracking-tight drop-shadow-[0_1px_0_rgba(255,255,255,.9)]">VP9655 — Flagship</h3>
+          </div>
+          <div class="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/5"></div>
+        </div>
+        <div class="col-span-12 lg:col-span-5 h-[520px] reveal-fade delay-150 relative overflow-hidden rounded-3xl border border-black/10 bg-white shadow-[0_20px_60px_rgba(0,0,0,.06)]">
+          <img src="https://framerusercontent.com/images/pPubcEs0E73BrzMJ9ISNYbNbmE.jpg?width=2048&height=1365" alt="Craft" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-x-0 bottom-0 p-6">
+            <div class="inline-flex items-center gap-2 rounded-full bg-white/85 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-black backdrop-blur">
+              <span class="h-2 w-2 rounded-full" style="background:#E10600"></span>
+              Alpine manufacturing
+            </div>
+            <h3 class="mt-2 text-2xl sm:text-3xl font-black tracking-tight drop-shadow-[0_1px_0_rgba(255,255,255,.9)]">Built by Craftspeople</h3>
+          </div>
+          <div class="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-black/5"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clubs & Schools (kept at #agents for header nav) -->
+    <section id="agents" class="relative mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid grid-cols-12 gap-6 items-stretch">
+        <div class="col-span-12 lg:col-span-5 reveal-up">
+          <h3 class="text-4xl sm:text-6xl font-black tracking-tight">Clubs & Schools</h3>
+          <p class="mt-3 text-black/70 font-medium max-w-md">Unified identity for teams that win. Bundled kits, bulk pricing, exact sizing runs.</p>
+          <div class="mt-6 grid grid-cols-2 gap-4 text-center">
+            <div class="rounded-2xl border border-black/10 bg-white p-4 shadow-sm"><div class="text-3xl font-black">72</div><div class="text-xs uppercase tracking-widest text-black/60">Clubs outfitted</div></div>
+            <div class="rounded-2xl border border-black/10 bg-white p-4 shadow-sm"><div class="text-3xl font-black">18k</div><div class="text-xs uppercase tracking-widest text-black/60">Pieces delivered</div></div>
+            <div class="rounded-2xl border border-black/10 bg-white p-4 shadow-sm"><div class="text-3xl font-black">14</div><div class="text-xs uppercase tracking-widest text-black/60">Countries served</div></div>
+            <div class="rounded-2xl border border-black/10 bg-white p-4 shadow-sm"><div class="text-3xl font-black">2.4w</div><div class="text-xs uppercase tracking-widest text-black/60">Avg. lead time</div></div>
+          </div>
+          <a href="#team" class="mt-6 inline-flex items-center gap-2 rounded-full bg-black px-6 py-3 text-xs font-extrabold uppercase tracking-[0.2em] text-white">
+            Start a Team Order
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block"><path d="M5 12h12M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="col-span-12 lg:col-span-7 grid grid-rows-2 gap-6">
+          <div class="reveal-fade relative overflow-hidden rounded-3xl border border-black/10 bg-white shadow-[0_20px_60px_rgba(0,0,0,.06)] h-[260px] lg:h-full">
+            <img src="https://framerusercontent.com/images/3cFOm6HG9gMGpVtNOY6CQvgV2E.webp?width=1456&height=816" alt="Ski club" class="absolute inset-0 h-full w-full object-cover"/>
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-black backdrop-blur">Race Clubs</span>
+          </div>
+          <div class="reveal-fade delay-150 relative overflow-hidden rounded-3xl border border-black/10 bg-white shadow-[0_20px_60px_rgba(0,0,0,.06)] h-[260px] lg:h-full">
+            <img src="https://framerusercontent.com/images/VwJQVZjz60tiAza6YOiyvrnhC8U.jpg?width=2000&height=1334" alt="Ski school" class="absolute inset-0 h-full w-full object-cover"/>
+            <span class="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] text-black backdrop-blur">Schools</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Craft -->
+    <section id="about" class="relative isolate overflow-hidden py-20">
+      <div class="absolute -inset-x-10 -bottom-24 h-72 rotate-2 bg-[radial-gradient(40%_60%_at_50%_0%,rgba(225,6,0,.08),transparent)]"></div>
+      <div class="relative mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 reveal-up">
+            <img src="https://framerusercontent.com/images/pPubcEs0E73BrzMJ9ISNYbNbmE.jpg?width=2048&height=1365" alt="Worker" class="w-full rounded-3xl border border-black/10 shadow-xl object-cover" />
+          </div>
+          <div class="lg:col-span-6 reveal-up">
+            <h3 class="text-4xl sm:text-6xl font-black tracking-tight">Made with real hands</h3>
+            <p class="mt-4 text-black/70 font-medium max-w-xl">Patterned, cut, and stitched with obsession. We iterate fast, test on snow, and only ship what we trust.</p>
+            <ul class="mt-6 space-y-3 text-sm/6 font-semibold">
+              <li class="flex items-center gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block"><path d="M5 12h12M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>3‑layer membranes & taped seams</span></li>
+              <li class="flex items-center gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block"><path d="M5 12h12M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Crash‑resistant paneling & ergonomics</span></li>
+              <li class="flex items-center gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block"><path d="M5 12h12M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Thermo‑regulated inner structure</span></li>
+              <li class="flex items-center gap-3"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="inline-block"><path d="M5 12h12M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <span>Repair program & spare parts</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Lab (above footer) -->
+    <section id="custom" class="relative isolate overflow-hidden py-20">
+      <div class="absolute inset-0 bg-[conic-gradient(from_180deg_at_50%_50%,_white,_#f7f7f7,_white)]"></div>
+      <div class="relative mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-6 reveal-up">
+            <h3 class="text-4xl sm:text-6xl font-black tracking-tight">Vitalini Custom Lab</h3>
+            <p class="mt-4 text-black/70 font-medium max-w-xl">Design pro‑grade race suits and jackets with your colors, logos, patterns. Real‑time previews, AI placement, production‑ready files.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="#try" class="rounded-xl bg-black px-6 py-3 text-xs font-extrabold uppercase tracking-[0.2em] text-white">Try the Demo</a>
+              <a href="#specs" class="rounded-xl border border-black/15 bg-white px-6 py-3 text-xs font-extrabold uppercase tracking-[0.2em] text-black hover:bg-black hover:text-white transition">Specs</a>
+            </div>
+            <ul class="mt-6 grid grid-cols-2 gap-3 text-sm/6 font-semibold">
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full" style="background:#E10600"></span>AI layout suggestions</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full" style="background:#E10600"></span>Pantone‑accurate prints</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full" style="background:#E10600"></span>Vector logo placement</li>
+              <li class="flex items-center gap-2"><span class="h-1.5 w-1.5 rounded-full" style="background:#E10600"></span>Instant size grading</li>
+            </ul>
+          </div>
+          <div class="lg:col-span-6 reveal-fade">
+            <div class="relative aspect-[4/3] overflow-hidden rounded-3xl border border-black/10 bg-white shadow-xl">
+              <img src="https://framerusercontent.com/images/eYZXiqyGXqXakB6Id6z3RPpHVc.png?width=1536&height=1024" alt="Configurator preview" class="absolute inset-0 h-full w-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-tr from-white/70 to-transparent"></div>
+              <div class="absolute bottom-4 right-4 flex gap-2">
+                <span class="rounded-full bg-black/85 px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-white">Preview</span>
+                <span class="rounded-full bg-white px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-black">VP9655</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="site-footer" class="relative mt-10 border-t border-black/10 bg-white">
+      <div class="mx-auto max-w-[1800px] px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-12 gap-6 items-center">
+          <div class="col-span-12 lg:col-span-5">
+            <img src="https://framerusercontent.com/images/7jMTSe1FHqNwAG14VgXuvdjPu8.png?width=1019&height=237" alt="VITALINI" class="h-10" />
+            <p class="mt-3 text-sm text-black/70 max-w-md">Vitalini — engineered for speed. Since 1993.</p>
+          </div>
+          <div class="col-span-12 lg:col-span-7">
+            <div class="rounded-3xl border border-black/10 bg-white p-6 sm:p-8 shadow-lg">
+              <div class="flex flex-wrap items-center gap-3">
+                <input placeholder="Email for early releases" class="h-12 flex-1 rounded-2xl border border-black/15 bg-white px-4 text-sm outline-none focus:ring-4 ring-black/5" />
+                <button class="h-12 rounded-2xl bg-black px-6 text-xs font-extrabold uppercase tracking-[0.2em] text-white">Subscribe</button>
+              </div>
+              <p class="mt-2 text-xs text-black/50">By subscribing you agree to receive emails from Vitalini. Unsubscribe anytime.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 flex items-center justify-between text-xs text-black/60">
+          <span>© <span id="year-foot"></span> Vitalini</span>
+          <div class="flex items-center gap-4">
+            <a href="#privacy" class="hover:text-black">Privacy</a>
+            <a href="#terms" class="hover:text-black">Terms</a>
+            <a href="#imprint" class="hover:text-black">Imprint</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Minimal JS: year + reveal-on-scroll (no JSX, no Babel) -->
+    <script>
+      document.getElementById('year-foot').textContent = new Date().getFullYear();
+      (function(){
+        const els = document.querySelectorAll('.reveal-up,.reveal-fade');
+        const io = new IntersectionObserver((entries)=>{
+          entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('reveal-in'); });
+        }, {threshold:0.15});
+        els.forEach(el=>io.observe(el));
+      })();
+    </script>
+
+  </body>
+</html>
